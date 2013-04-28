@@ -34,7 +34,7 @@ gem 'twitter-text', '~> 1.5.0'
 gem 'jquery-atwho-rails', '~> 0.1.6'
 gem 'paper_trail', '~> 2.6.3'
 gem 'high_voltage', '~> 1.2.0'
-gem 'thin', '~> 1.4.1'
+gem 'thin', '~> 1.5.1'
 gem 'rack-canonical-host', '~> 0.0.8'
 gem 'delayed_job_active_record', '~> 0.3.3'
 gem 'hirefireapp', '~> 0.0.8'
@@ -48,7 +48,8 @@ gem 'rinku', '~> 1.7.2'
 gem 'sass-rails',   '~> 3.2.6'
 gem 'coffee-rails', '~> 3.2.2'
 gem 'piwik_analytics', '~> 1.0.1'
-
+gem 'fnordmetric', '~> 1.2.7'
+gem 'eventmachine', '~> 1.0.0' 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -58,7 +59,7 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'thin', '~> 1.4.1'
+  gem 'thin', '~> 1.5.1'
   gem 'debugger', '~> 1.2.2'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'faker', '~> 1.0.1'
@@ -68,7 +69,7 @@ group :development, :test do
   gem 'database_cleaner', '~> 0.9.1'
   gem 'selenium-webdriver', '~> 2.25.0'
   gem 'letter_opener', '~> 1.0.0'
-  gem 'mailcatcher', '~> 0.5.8'
+  gem 'mailcatcher', '~> 0.5.11'
 end
 
 group :development do
