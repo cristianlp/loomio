@@ -76,6 +76,8 @@ class DiscussionsController < GroupBaseController
       ViewLogger.motion_viewed(@current_motion, current_user) if @current_motion
       ViewLogger.discussion_viewed(@discussion, current_user)
     end
+
+    @discussion.trigger_view_event
   end
 
   def move

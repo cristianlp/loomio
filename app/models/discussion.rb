@@ -153,6 +153,10 @@ class Discussion < ActiveRecord::Base
     fire_edit_title_event(user)
   end
 
+  def trigger_view_event
+    FNORD_METRIC.event(attributes.merge(_type: :view_discussion))
+  end
+
   private
 
     def populate_last_comment_at
