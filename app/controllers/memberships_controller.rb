@@ -44,10 +44,10 @@ class MembershipsController < BaseController
       authorize! :ignore_request, @membership
       @membership.destroy
       flash[:notice] = t("notice.membership_request_ignored")
-      redirect_to @membership.group
+      redirect_to group_url(@membership.group)
     else
       flash[:warning] = t("warning.membership_request_already_ignored")
-      redirect_to :back
+      redirect_to group_url(@membership.group)
     end
   end
 
@@ -56,10 +56,10 @@ class MembershipsController < BaseController
       authorize! :cancel_request, @membership
       @membership.destroy
       flash[:notice] = t("notice.membership_request_canceled")
-      redirect_to @membership.group
+      redirect_to group_url(@membership.group)
     else
       flash[:warning] = t("warning.membership_request_already_canceled")
-      redirect_to :back
+      redirect_to group_url(@membership.group)
     end
   end
 

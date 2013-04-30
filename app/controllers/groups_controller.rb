@@ -76,7 +76,8 @@ class GroupsController < GroupBaseController
     if resource.users.include? current_user
       redirect_to group_url(resource)
     else
-      @membership = Membership.new
+      @membership = 
+      ip.new
     end
   end
 
@@ -91,7 +92,7 @@ class GroupsController < GroupBaseController
     body = params[:group_email_body]
     GroupMailer.delay.deliver_group_email(@group, current_user, subject, body)
     flash[:success] = t("success.emails_sending")
-    redirect_to :back
+    redirect_to group_url(@group)
   end
 
   def edit_description
